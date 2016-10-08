@@ -1,0 +1,34 @@
+package karatsuba;
+import java.util.Scanner;
+public class Karatsuba { 
+    public static void main(String[] args) {
+      
+       String x , y;
+       Scanner sc = new Scanner(System.in);
+       System.out.println("X: ");
+       x = sc.next();
+       System.out.println("Y: ");
+       y = sc.next();
+       int a = Integer.parseInt(x.substring(0,2));  
+       int b = Integer.parseInt(x.substring(2,4));  
+       int c = Integer.parseInt(y.substring(0,2));  
+       int d = Integer.parseInt(y.substring(2,4));  
+      
+        int ad = a*d;
+        int ac = a*c;
+        int bc =  b*c;
+        int bd = b*d;
+        int adbc = ad + bc;
+        
+        System.out.println("ad = " + ad);
+        System.out.println("ac = " + ac);
+        System.out.println("bd = " + bd);
+        System.out.println("bc = " + bd);
+        System.out.println("adbc = " + adbc);
+        
+        int answer = (ac*10000) + (adbc *100) + bd;
+        System.out.println("Answer : " + answer);
+        
+    }
+    
+}
